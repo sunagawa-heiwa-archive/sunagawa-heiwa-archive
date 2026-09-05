@@ -6,7 +6,8 @@
 <div class="stats"><span class="stat">208 articles / 208件の記事</span><span class="stat">FC2 90</span><span class="stat">Ameblo 118</span></div>
 <div class="filters"><a href="https://sunagawaheiwa.blog.fc2.com/">Original FC2 website / FC2元サイト</a><a href="https://ameblo.jp/2021fukuoka-ameba/">Original Ameblo blog / Ameblo元ブログ</a></div>
 <div class="language-nav" aria-label="Language / 言語"><div class="language-nav-label">Language / 言語</div><button class="language-filter active" type="button" data-language-filter="all">All / すべて <small>208</small></button><button class="language-filter" type="button" data-language-filter="ja">Japanese / 日本語 <small>190</small></button><button class="language-filter" type="button" data-language-filter="en">English / 英語 <small>10</small></button><button class="language-filter" type="button" data-language-filter="ja-en">Japanese + English / 日本語 + 英語 <small>5</small></button><button class="language-filter" type="button" data-language-filter="zh">Chinese / 中文（繁體・简体） <small>3</small></button></div>
-<nav class="year-nav" aria-label="Browse by year / 年別に見る"><div class="year-nav-label">Browse by year / 年別に見る</div><a class="year-link" href="#year-2025"><span>2025 / 2025年</span><small>4</small></a><a class="year-link" href="#year-2024"><span>2024 / 2024年</span><small>21</small></a><a class="year-link" href="#year-2023"><span>2023 / 2023年</span><small>35</small></a><a class="year-link" href="#year-2022"><span>2022 / 2022年</span><small>58</small></a><a class="year-link" href="#year-2020"><span>2020 / 2020年</span><small>1</small></a><a class="year-link" href="#year-2018"><span>2018 / 2018年</span><small>8</small></a><a class="year-link" href="#year-2017"><span>2017 / 2017年</span><small>16</small></a><a class="year-link" href="#year-2016"><span>2016 / 2016年</span><small>12</small></a><a class="year-link" href="#year-2015"><span>2015 / 2015年</span><small>21</small></a><a class="year-link" href="#year-2014"><span>2014 / 2014年</span><small>3</small></a><a class="year-link" href="#year-2013"><span>2013 / 2013年</span><small>8</small></a><a class="year-link" href="#year-2012"><span>2012 / 2012年</span><small>19</small></a><a class="year-link" href="#year-2011"><span>2011 / 2011年</span><small>2</small></a></nav>
+<div id="filter-status" class="filter-status" aria-live="polite">Showing all 208 articles / 全208件を表示</div>
+<nav class="year-nav" aria-label="Browse by year / 年別に見る"><div class="year-nav-label">Browse by year / 年別に見る</div><a class="year-link" data-year="year-2025" href="#year-2025"><span>2025 / 2025年</span><small>4</small></a><a class="year-link" data-year="year-2024" href="#year-2024"><span>2024 / 2024年</span><small>21</small></a><a class="year-link" data-year="year-2023" href="#year-2023"><span>2023 / 2023年</span><small>35</small></a><a class="year-link" data-year="year-2022" href="#year-2022"><span>2022 / 2022年</span><small>58</small></a><a class="year-link" data-year="year-2020" href="#year-2020"><span>2020 / 2020年</span><small>1</small></a><a class="year-link" data-year="year-2018" href="#year-2018"><span>2018 / 2018年</span><small>8</small></a><a class="year-link" data-year="year-2017" href="#year-2017"><span>2017 / 2017年</span><small>16</small></a><a class="year-link" data-year="year-2016" href="#year-2016"><span>2016 / 2016年</span><small>12</small></a><a class="year-link" data-year="year-2015" href="#year-2015"><span>2015 / 2015年</span><small>21</small></a><a class="year-link" data-year="year-2014" href="#year-2014"><span>2014 / 2014年</span><small>3</small></a><a class="year-link" data-year="year-2013" href="#year-2013"><span>2013 / 2013年</span><small>8</small></a><a class="year-link" data-year="year-2012" href="#year-2012"><span>2012 / 2012年</span><small>19</small></a><a class="year-link" data-year="year-2011" href="#year-2011"><span>2011 / 2011年</span><small>2</small></a></nav>
 <section class="year-section" id="year-2025"><h2>2025 / 2025年 <small>4 articles / 4件</small></h2><section class="month-section"><h3>September / 9月 <small>1 article / 1件</small></h3><div class="entry-list"><a class="entry" data-language="ja" href="articles/ameblo-12931093226.html"><span class="entry-title">2025年秋の集会「基地に抗う」10月18日(土) 13:40～  立川市アイムホールにて開催</span><span class="entry-meta">2025-09-18T16:55:52.000+09:00 · Ameblo · <span class="entry-language">Japanese / 日本語</span></span></a>
 </div></section>
 <section class="month-section"><h3>June / 6月 <small>1 article / 1件</small></h3><div class="entry-list"><a class="entry" data-language="ja" href="articles/ameblo-12907468172.html"><span class="entry-title">2025.6.7(土) 砂川闘争70周年のつどい</span><span class="entry-meta">2025-06-01T10:44:17.000+09:00 · Ameblo · <span class="entry-language">Japanese / 日本語</span></span></a>
@@ -311,13 +312,33 @@
     const entries = [...document.querySelectorAll('.entry[data-language]')];
     const months = [...document.querySelectorAll('.month-section')];
     const years = [...document.querySelectorAll('.year-section')];
-    const applyFilter = (language) => {
+    const yearLinks = [...document.querySelectorAll('.year-link')];
+    const status = document.querySelector('#filter-status');
+    const labels = { all: 'all', ja: 'Japanese / 日本語', en: 'English / 英語', 'ja-en': 'Japanese + English / 日本語 + 英語', zh: 'Chinese / 中文（繁體・简体）' };
+    const applyFilter = (language, updateUrl = true) => {
       buttons.forEach((button) => button.classList.toggle('active', button.dataset.languageFilter === language));
       entries.forEach((entry) => { entry.hidden = language !== 'all' && entry.dataset.language !== language; });
       months.forEach((month) => { month.hidden = !month.querySelector('.entry:not([hidden])'); });
       years.forEach((year) => { year.hidden = !year.querySelector('.entry:not([hidden])'); });
+      const visibleEntries = entries.filter((entry) => !entry.hidden);
+      yearLinks.forEach((link) => {
+        const year = document.getElementById(link.dataset.year);
+        const yearEntries = year ? [...year.querySelectorAll('.entry[data-language]:not([hidden])')] : [];
+        link.hidden = yearEntries.length === 0;
+        const count = link.querySelector('small');
+        if (count) count.textContent = yearEntries.length;
+      });
+      if (status) status.textContent = language === 'all' ? `Showing all ${visibleEntries.length} articles / 全${visibleEntries.length}件を表示` : `Showing ${visibleEntries.length} ${labels[language]} articles / ${labels[language]}を${visibleEntries.length}件表示`;
+      if (updateUrl) {
+        const url = new URL(window.location.href);
+        if (language === 'all') url.searchParams.delete('language');
+        else url.searchParams.set('language', language);
+        window.history.replaceState({}, '', url);
+      }
     };
     buttons.forEach((button) => button.addEventListener('click', () => applyFilter(button.dataset.languageFilter)));
+    const initialLanguage = new URLSearchParams(window.location.search).get('language');
+    applyFilter(buttons.some((button) => button.dataset.languageFilter === initialLanguage) ? initialLanguage : 'all', false);
   })();
 </script>
 </div></body></html>
