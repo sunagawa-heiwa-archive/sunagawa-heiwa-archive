@@ -314,7 +314,7 @@
     const years = [...document.querySelectorAll('.year-section')];
     const yearLinks = [...document.querySelectorAll('.year-link')];
     const status = document.querySelector('#filter-status');
-    const labels = { all: 'all', ja: 'Japanese / 日本語', en: 'English / 英語', 'ja-en': 'Japanese + English / 日本語 + 英語', zh: 'Chinese / 中文（繁體・简体）' };
+    const labels = { all: 'all', ja: ['Japanese', '日本語'], en: ['English', '英語'], 'ja-en': ['Japanese + English', '日本語 + 英語'], zh: ['Chinese', '中文（繁體・简体）'] };
     const applyFilter = (language, updateUrl = true) => {
       buttons.forEach((button) => button.classList.toggle('active', button.dataset.languageFilter === language));
       entries.forEach((entry) => { entry.hidden = language !== 'all' && entry.dataset.language !== language; });
@@ -328,7 +328,7 @@
         const count = link.querySelector('small');
         if (count) count.textContent = yearEntries.length;
       });
-      if (status) status.textContent = language === 'all' ? `Showing all ${visibleEntries.length} articles / 全${visibleEntries.length}件を表示` : `Showing ${visibleEntries.length} ${labels[language]} articles / ${labels[language]}を${visibleEntries.length}件表示`;
+      if (status) status.textContent = language === 'all' ? `Showing all ${visibleEntries.length} articles / 全${visibleEntries.length}件を表示` : `Showing ${visibleEntries.length} ${labels[language][0]} articles / ${labels[language][1]}の記事${visibleEntries.length}件を表示`;
       if (updateUrl) {
         const url = new URL(window.location.href);
         if (language === 'all') url.searchParams.delete('language');
