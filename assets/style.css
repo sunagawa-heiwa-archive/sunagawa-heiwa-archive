@@ -1,0 +1,24 @@
+:root { color-scheme: light; --ink:#202522; --muted:#68736d; --paper:#fbfaf6; --line:#dfe4df; --accent:#496f61; }
+* { box-sizing: border-box; }
+body { margin:0; color:var(--ink); background:var(--paper); font-family:system-ui,-apple-system,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif; line-height:1.8; }
+a { color:var(--accent); }
+.wrap { max-width:980px; margin:0 auto; padding:28px 20px 64px; }
+header { border-bottom:1px solid var(--line); margin-bottom:28px; padding-bottom:18px; }
+h1 { line-height:1.3; margin:0 0 8px; font-size:clamp(1.7rem,4vw,2.7rem); }
+h2 { line-height:1.4; }
+.lede, .meta { color:var(--muted); }
+.stats { display:flex; flex-wrap:wrap; gap:10px; margin:22px 0; }
+.stat { border:1px solid var(--line); border-radius:10px; padding:8px 14px; background:white; }
+.filters { display:flex; gap:10px; flex-wrap:wrap; margin:24px 0 14px; }
+.filters a { border:1px solid var(--line); border-radius:999px; padding:4px 12px; text-decoration:none; background:white; }
+.entry-list { display:grid; gap:10px; }
+.entry { display:block; border:1px solid var(--line); border-radius:10px; padding:13px 16px; background:white; text-decoration:none; }
+.entry:hover { border-color:var(--accent); }
+.entry-title { display:block; color:var(--ink); font-weight:650; }
+.entry-meta { color:var(--muted); font-size:.9rem; }
+article { background:white; border:1px solid var(--line); border-radius:12px; padding:clamp(18px,4vw,42px); }
+article h1 { margin-bottom:5px; }
+.source { color:var(--muted); font-size:.9rem; margin-bottom:30px; word-break:break-word; }
+.body img { max-width:100%; height:auto; display:block; margin:18px auto; }
+.body p { margin:1em 0; }
+footer { color:var(--muted); font-size:.88rem; margin-top:28px; }
