@@ -1,10 +1,10 @@
-# 砂川平和ひろば公开文章归档
+# Sunagawa Heiwa Hiroba Public Article Archive
 
-这是 `砂川平和ひろば Sunagawa Heiwa Hiroba` 的公开网页快照，合并了：
+Public web snapshots from `Sunagawa Heiwa Hiroba`, combining:
 
-- FC2：`https://sunagawaheiwa.blog.fc2.com/`
-- Ameblo：`https://ameblo.jp/2021fukuoka-ameba/`
+- FC2: `https://sunagawaheiwa.blog.fc2.com/`
+- Ameblo: `https://ameblo.jp/2021fukuoka-ameba/`
 
-本次快照日期为 2026-09-05，共收录 208 篇：FC2 90 篇，Ameblo 118 篇。网站首页是 `index.html`，静态文章位于 `articles/`；Obsidian 版本位于 `obsidian/`；原始 HTML 快照位于 `raw/`。
+The snapshot was captured on 2026-09-05 and contains 208 articles: 90 from FC2 and 118 from Ameblo. The website home page is `index.html`; static article pages are in `articles/`; Obsidian versions are in `obsidian/`; raw HTML snapshots are in `raw/`.
 
-图片暂时保留原站 URL，并未批量复制到本项目，以避免在未确认授权前重新分发可能属于第三方的图片。正式公开到 GitHub Pages 前，应由作者确认文字、照片、报纸截图及其他嵌入内容的再发布授权，并决定是否保留图片。
+Images currently retain their original source URLs rather than being copied into this project. The author should confirm permission to republish text, photographs, newspaper clippings, and other embedded material.
