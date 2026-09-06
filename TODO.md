@@ -1,6 +1,6 @@
 # 砂川平和ひろば アーカイブサイト — 修正チェックリスト
 
-対象：`https://sunagawa-heiwa-archive.github.io/sunagawa-heiwa-archive/`  
+対象：`https://sunagawa-heiwa-archive.github.io/`  
 作成日：2026-09-06
 
 ## P0 — 公開前に確認すること
@@ -22,7 +22,7 @@
 - [x] Ameblo 原文の連続した空段落を圧縮し、記事内の不自然な大きな空白を減らした。
 - [x] サイト内検索を追加。タイトルと保存本文を対象に、言語・年フィルターと組み合わせて検索できる。
 - [x] 一覧のタイトルは原記事タイトルをそのまま表示し、サイト名サフィックスを付けていないことを確認。
-- [ ] **Pages の URL をルート化する**：`sunagawa-heiwa-archive.github.io` リポジトリへ改名すると `https://sunagawa-heiwa-archive.github.io/` にできる。旧 URL のリダイレクトと、すでに共有したリンクへの影響を確認してから実施する。
+- [x] **Pages の URL をルート化する**：リポジトリを `sunagawa-heiwa-archive/sunagawa-heiwa-archive` から `sunagawa-heiwa-archive/sunagawa-heiwa.github.io` へ改名し、`https://sunagawa-heiwa-archive.github.io/` を正規 URL とした。旧プロジェクト URL は GitHub のリダイレクトが機能する期間に順次置き換える。
 
 ## P3 — 全体構成・文脈
 
