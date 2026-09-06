@@ -7,6 +7,6 @@ Public web snapshots from `Sunagawa Heiwa Hiroba`, combining:
 
 The snapshot was captured on 2026-09-05 and contains 208 articles: 90 from FC2 and 118 from Ameblo. The website home page is `index.html`; static article pages are in `articles/`; Obsidian versions are in `obsidian/`; raw HTML snapshots are in `raw/`.
 
-Language categories: 190 Japanese / 日本語, 10 English / 英語, 5 Japanese + English / 日本語 + 英語, and 3 Chinese / 中文（繁體・简体）. The home page includes language filters.
+Language categories: 190 Japanese / 日本語, 10 English / 英語, 5 Japanese + English / 日本語 + 英語, and 3 Chinese / 中文（繁體・简体）. The home page includes combined language, year, and keyword filters.
 
-Images currently retain their original source URLs rather than being copied into this project. The author should confirm permission to republish text, photographs, newspaper clippings, and other embedded material.
+Article pages include basic search metadata, social sharing metadata, accessible image alternatives, and machine-readable dates. Images currently retain their original source URLs rather than being copied into this project. The author should confirm permission to republish text, photographs, newspaper clippings, and other embedded material before localizing images.
