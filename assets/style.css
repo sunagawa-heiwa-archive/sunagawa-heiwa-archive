@@ -12,6 +12,11 @@ h2 { line-height:1.4; }
 .context p { margin:10px 0; }
 .context-links { display:flex; flex-wrap:wrap; gap:8px 12px; margin-top:14px !important; }
 .context-links a { display:inline-block; border:1px solid var(--line); border-radius:999px; padding:5px 12px; background:white; text-decoration:none; }
+.official-links { margin:24px 0 18px; }
+.official-links h2 { color:var(--muted); margin:0 0 10px; font-size:1rem; font-weight:600; }
+.official-links-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px; }
+.official-links-grid a { display:flex; align-items:center; min-height:48px; border:1px solid var(--line); border-radius:10px; padding:8px 13px; background:white; text-decoration:none; line-height:1.45; }
+.official-links-grid a:hover { border-color:var(--accent); }
 .stats { display:flex; flex-wrap:wrap; gap:10px; margin:22px 0; }
 .stat { border:1px solid var(--line); border-radius:10px; padding:8px 14px; background:white; }
 .filters { display:flex; gap:10px; flex-wrap:wrap; margin:24px 0 14px; }
