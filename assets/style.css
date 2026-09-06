@@ -58,6 +58,19 @@ article h1 { margin-bottom:5px; }
 .source { color:var(--muted); font-size:.9rem; margin-bottom:30px; word-break:break-word; }
 .body img { max-width:100%; height:auto; display:block; margin:18px auto; }
 .body p { margin:1em 0; }
+.timeline-summary { border:1px solid var(--line); border-radius:12px; padding:18px 20px; background:#f3f6f1; margin:24px 0 30px; }
+.timeline-summary p { margin:8px 0; }
+.timeline { list-style:none; padding:0 0 0 28px; margin:34px 0 42px; border-left:2px solid var(--line); }
+.timeline-item { position:relative; margin:0 0 30px; padding:0 0 0 22px; }
+.timeline-item::before { content:""; position:absolute; left:-8px; top:8px; width:12px; height:12px; border:2px solid var(--paper); border-radius:50%; background:var(--accent); box-shadow:0 0 0 1px var(--accent); }
+.timeline-date { color:var(--accent); font-weight:700; font-size:.95rem; }
+.timeline-item h2 { margin:3px 0 7px; font-size:1.25rem; }
+.timeline-kind { display:inline-block; color:var(--muted); border:1px solid var(--line); border-radius:999px; padding:2px 9px; font-size:.8rem; margin-bottom:7px; background:var(--paper); }
+.timeline-item p { margin:8px 0; }
+.timeline-sources { margin:10px 0 0; padding-left:1.2em; }
+.timeline-sources li { margin:4px 0; }
+.timeline-source-meta { color:var(--muted); font-size:.85rem; margin-left:6px; }
+.timeline-notes { border-top:1px solid var(--line); padding-top:18px; color:var(--muted); font-size:.92rem; }
 .not-found { background:white; border:1px solid var(--line); border-radius:12px; padding:clamp(22px,5vw,48px); }
 .not-found h2 { margin-top:0; }
 .not-found a { display:inline-block; margin-top:10px; border:1px solid var(--line); border-radius:999px; padding:7px 13px; background:white; text-decoration:none; }
