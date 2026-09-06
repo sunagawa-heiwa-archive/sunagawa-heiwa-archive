@@ -59,4 +59,8 @@ article h1 { margin-bottom:5px; }
 .body img { max-width:100%; height:auto; display:block; margin:18px auto; }
 .body p { margin:1em 0; }
 .body p.spacer { min-height:.6em; margin:.6em 0; }
+.not-found { background:white; border:1px solid var(--line); border-radius:12px; padding:clamp(22px,5vw,48px); }
+.not-found h2 { margin-top:0; }
+.not-found a { display:inline-block; margin-top:10px; border:1px solid var(--line); border-radius:999px; padding:7px 13px; background:white; text-decoration:none; }
+.not-found a:hover { border-color:var(--accent); }
 footer { color:var(--muted); font-size:.88rem; margin-top:28px; }

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Sunagawa Heiwa Hiroba">
+  <rect width="64" height="64" rx="14" fill="#496f61"/>
+  <path d="M16 18h14c5 0 9 2 9 7v22c-2-2-5-3-9-3H16V18Zm32 0H34c-5 0-9 2-9 7v22c2-2 5-3 9-3h14V18Z" fill="#fbfaf6"/>
+  <path d="M32 25v20" stroke="#496f61" stroke-width="3"/>
+</svg>

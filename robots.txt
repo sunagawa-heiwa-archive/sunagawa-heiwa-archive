@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sunagawa-heiwa-archive.github.io/sitemap.xml
