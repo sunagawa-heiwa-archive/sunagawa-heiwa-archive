@@ -54,7 +54,7 @@ h2 { line-height:1.4; }
 .month-section { margin:24px 0 28px; }
 .month-section h3 { color:var(--accent); margin:0 0 10px; font-size:1.08rem; }
 .entry-list { display:grid; gap:10px; }
-.entry { display:block; border:1px solid var(--line); border-radius:10px; padding:13px 16px; background:white; text-decoration:none; }
+.entry { display:block; border:1px solid var(--line); border-radius:10px; padding:13px 16px; background:white; text-decoration:none; scroll-margin-top:120px; }
 .entry:hover { border-color:var(--accent); }
 .entry-title { display:block; color:var(--ink); font-weight:650; }
 .entry-meta { color:var(--muted); font-size:.9rem; }
