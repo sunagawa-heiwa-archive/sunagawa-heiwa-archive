@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sunagawa Heiwa Hiroba · Public Article Archive / 公開記事アーカイブ</title><link rel="stylesheet" href="assets/style.css?v=20260906-2"></head>
+<title>Sunagawa Heiwa Hiroba · Public Article Archive / 公開記事アーカイブ</title><link rel="stylesheet" href="assets/style.css?v=20260906-3"></head>
 <body><div class="wrap"><header><h1>Sunagawa Heiwa Hiroba / 砂川平和ひろば</h1><div class="lede">～Broadcasting from the site of the Sunagawa Struggle～ · Public Article Archive / 公開記事アーカイブ</div></header>
 <p>This archive brings together public articles from the former FC2 website and the subsequent Ameblo blog. Articles are organized by year and month, with the newest entries first. Original Japanese text is preserved, with a link to the source page.<br>このアーカイブは旧FC2サイトと後継のAmebloブログの公開記事をまとめたものです。記事は年・月別に整理し、新しい順に並べています。本文は日本語原文を保存し、元ページへのリンクを付けています。</p>
 <div class="stats"><span class="stat">208 articles / 208件の記事</span><span class="stat">FC2 90</span><span class="stat">Ameblo 118</span></div>
 <div class="filters"><a href="https://sunagawaheiwa.blog.fc2.com/">Original FC2 website / FC2元サイト</a><a href="https://ameblo.jp/2021fukuoka-ameba/">Original Ameblo blog / Ameblo元ブログ</a></div>
-<div class="language-nav" aria-label="Language / 言語"><div class="language-nav-label">Language / 言語</div><button class="language-filter active" type="button" data-language-filter="all">All / すべて <small>208</small></button><button class="language-filter" type="button" data-language-filter="ja">Japanese / 日本語 <small>190</small></button><button class="language-filter" type="button" data-language-filter="en">English / 英語 <small>10</small></button><button class="language-filter" type="button" data-language-filter="ja-en">Japanese + English / 日本語 + 英語 <small>5</small></button><button class="language-filter" type="button" data-language-filter="zh">Chinese / 中文（繁體・简体） <small>3</small></button></div>
-<div id="filter-status" class="filter-status" aria-live="polite">Showing all 208 articles / 全208件を表示</div>
+<div class="language-nav" aria-label="Language / 言語"><div class="language-nav-label">Language / 言語</div><button class="language-filter active" type="button" data-language-filter="all">All languages / 全言語 <small>208</small></button><button class="language-filter" type="button" data-language-filter="ja">Japanese / 日本語 <small>190</small></button><button class="language-filter" type="button" data-language-filter="en">English / 英語 <small>10</small></button><button class="language-filter" type="button" data-language-filter="ja-en">Japanese + English / 日本語 + 英語 <small>5</small></button><button class="language-filter" type="button" data-language-filter="zh">Chinese / 中文（繁體・简体） <small>3</small></button></div>
+<div class="filter-status"><span id="filter-status-text" aria-live="polite">Showing all 208 articles / 全208件を表示</span><button id="reset-filters" type="button">Reset all filters / すべて解除</button></div>
 <nav class="year-nav" aria-label="Filter by year / 年份筛选"><div class="year-nav-label">Filter by year / 年份筛选</div><button class="year-link active" type="button" data-year-filter="all"><span>All years / 全部年份</span><small>208</small></button><button class="year-link" type="button" data-year-filter="2025"><span>2025 / 2025年</span><small>4</small></button><button class="year-link" type="button" data-year-filter="2024"><span>2024 / 2024年</span><small>21</small></button><button class="year-link" type="button" data-year-filter="2023"><span>2023 / 2023年</span><small>35</small></button><button class="year-link" type="button" data-year-filter="2022"><span>2022 / 2022年</span><small>58</small></button><button class="year-link" type="button" data-year-filter="2020"><span>2020 / 2020年</span><small>1</small></button><button class="year-link" type="button" data-year-filter="2018"><span>2018 / 2018年</span><small>8</small></button><button class="year-link" type="button" data-year-filter="2017"><span>2017 / 2017年</span><small>16</small></button><button class="year-link" type="button" data-year-filter="2016"><span>2016 / 2016年</span><small>12</small></button><button class="year-link" type="button" data-year-filter="2015"><span>2015 / 2015年</span><small>21</small></button><button class="year-link" type="button" data-year-filter="2014"><span>2014 / 2014年</span><small>3</small></button><button class="year-link" type="button" data-year-filter="2013"><span>2013 / 2013年</span><small>8</small></button><button class="year-link" type="button" data-year-filter="2012"><span>2012 / 2012年</span><small>19</small></button><button class="year-link" type="button" data-year-filter="2011"><span>2011 / 2011年</span><small>2</small></button></nav>
 <section class="year-section" id="year-2025"><h2>2025 / 2025年 <small>4 articles / 4件</small></h2><section class="month-section"><h3>September / 9月 <small>1 article / 1件</small></h3><div class="entry-list"><a class="entry" data-language="ja" data-year="2025" href="articles/ameblo-12931093226.html"><span class="entry-title">2025年秋の集会「基地に抗う」10月18日(土) 13:40～  立川市アイムホールにて開催</span><span class="entry-meta">2025-09-18T16:55:52.000+09:00 · Ameblo · <span class="entry-language">Japanese / 日本語</span></span></a>
 </div></section>
@@ -313,7 +313,8 @@
     const entries = [...document.querySelectorAll('.entry[data-language]')];
     const months = [...document.querySelectorAll('.month-section')];
     const years = [...document.querySelectorAll('.year-section')];
-    const status = document.querySelector('#filter-status');
+    const status = document.querySelector('#filter-status-text');
+    const resetButton = document.querySelector('#reset-filters');
     const labels = { all: 'all', ja: ['Japanese', '日本語'], en: ['English', '英語'], 'ja-en': ['Japanese + English', '日本語 + 英語'], zh: ['Chinese', '中文（繁體・简体）'] };
     const applyFilters = (language, requestedYear, updateUrl = true) => {
       const hasLanguage = (entry) => language === 'all' || entry.dataset.language === language;
@@ -333,11 +334,13 @@
         if (count) count.textContent = yearEntries.length;
       });
       if (status) {
-        const languageText = language === 'all' ? '' : `${labels[language][0]} `;
-        const japaneseText = language === 'all' ? '' : `${labels[language][1]}の`;
-        const yearText = year === 'all' ? '' : ` from ${year} / ${year}年の`;
-        const yearJapaneseText = year === 'all' ? '' : `（${year}年）`;
-        status.textContent = language === 'all' && year === 'all' ? `Showing all ${visibleEntries.length} articles / 全${visibleEntries.length}件を表示` : `Showing ${visibleEntries.length} ${languageText}articles${yearText} / ${yearJapaneseText}${japaneseText}記事${visibleEntries.length}件を表示`;
+        const englishScope = language === 'all' ? '' : ` ${labels[language][0]}`;
+        const japaneseScope = language === 'all' ? '' : ` ${labels[language][1]}`;
+        const englishYear = year === 'all' ? '' : ` from ${year}`;
+        const japaneseYear = year === 'all' ? '' : `（${year}年）`;
+        const englishAll = language === 'all' && year === 'all' ? 'all ' : '';
+        const japaneseStatus = language === 'all' && year === 'all' ? `全${visibleEntries.length}件を表示` : `${japaneseYear}${japaneseScope}の記事${visibleEntries.length}件を表示`;
+        status.textContent = `Showing ${englishAll}${visibleEntries.length}${englishScope} articles${englishYear} / ${japaneseStatus}`;
       }
       if (updateUrl) {
         const url = new URL(window.location.href);
@@ -350,6 +353,7 @@
     };
     languageButtons.forEach((button) => button.addEventListener('click', () => applyFilters(button.dataset.languageFilter, new URLSearchParams(window.location.search).get('year') || 'all')));
     yearButtons.forEach((button) => button.addEventListener('click', () => applyFilters(new URLSearchParams(window.location.search).get('language') || 'all', button.dataset.yearFilter)));
+    if (resetButton) resetButton.addEventListener('click', () => applyFilters('all', 'all'));
     const initialLanguage = new URLSearchParams(window.location.search).get('language');
     const initialYear = new URLSearchParams(window.location.search).get('year');
     applyFilters(languageButtons.some((button) => button.dataset.languageFilter === initialLanguage) ? initialLanguage : 'all', yearButtons.some((button) => button.dataset.yearFilter === initialYear) ? initialYear : 'all', false);

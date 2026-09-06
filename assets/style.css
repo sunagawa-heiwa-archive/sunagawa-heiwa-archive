@@ -16,7 +16,10 @@ h2 { line-height:1.4; }
 .language-filter { color:var(--accent); border:1px solid var(--line); border-radius:999px; padding:6px 11px; background:white; font:inherit; cursor:pointer; }
 .language-filter:hover, .language-filter.active { color:white; border-color:var(--accent); background:var(--accent); }
 .language-filter small { font-size:.78rem; opacity:.8; }
-.filter-status { color:var(--muted); font-size:.92rem; margin:10px 0 4px; }
+.filter-status { display:flex; align-items:center; justify-content:space-between; gap:12px; color:var(--muted); font-size:.92rem; margin:10px 0 4px; }
+#reset-filters { color:var(--accent); border:1px solid var(--line); border-radius:999px; padding:5px 10px; background:white; font:inherit; cursor:pointer; }
+#reset-filters:hover { color:white; border-color:var(--accent); background:var(--accent); }
+@media (max-width:700px) { .filter-status { align-items:flex-start; flex-direction:column; } }
 .year-nav { display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin:18px 0 30px; }
 .year-nav-label { width:100%; color:var(--muted); font-size:.9rem; margin-bottom:2px; }
 .year-nav button { display:inline-flex; align-items:center; gap:7px; color:var(--accent); border:1px solid var(--line); border-radius:999px; padding:6px 11px; background:white; font:inherit; cursor:pointer; }
