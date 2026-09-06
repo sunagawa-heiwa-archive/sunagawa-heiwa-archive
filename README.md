@@ -13,4 +13,4 @@ The home page includes a short bilingual introduction to the Sunagawa Struggle, 
 
 Article pages include basic search metadata, social sharing metadata, accessible image alternatives, and machine-readable dates. There are 407 image occurrences; 405 were downloaded into `images/` (about 48 MB) and two source URLs returned 404 during capture. The author should confirm permission to republish text, photographs, newspaper clippings, and other embedded material.
 
-The current repository is `sunagawa-heiwa.github.io`, so the project site is published at `https://sunagawa-heiwa-archive.github.io/sunagawa-heiwa.github.io/`. To publish directly at the organization root, the repository must instead be named exactly `sunagawa-heiwa-archive.github.io`.
+The repository is `sunagawa-heiwa-archive.github.io`, which enables the organization-root Pages site at `https://sunagawa-heiwa-archive.github.io/`.
