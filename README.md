@@ -9,7 +9,7 @@ The snapshot was captured on 2026-09-05 and contains 208 articles: 90 from FC2 a
 
 Language categories: 190 Japanese / 日本語, 10 English / 英語, 5 Japanese + English / 日本語 + 英語, and 3 Chinese / 中文（繁體・简体）. The home page includes combined language, year, and keyword filters.
 
-The home page includes a short bilingual introduction to the Sunagawa Struggle, links to three background articles in this archive, the official YouTube channel, and the public contact address `sunagawa.heiwa@gmail.com`.
+The home page includes a short bilingual introduction to the Sunagawa Struggle, links to three background articles and a civil damages lawsuit timeline in this archive, the official YouTube channel, and the public contact address `sunagawa.heiwa@gmail.com`.
 
 Article pages include basic search metadata, social sharing metadata, accessible image alternatives, and machine-readable dates. The site also includes `sitemap.xml`, `robots.txt`, a favicon, and a custom 404 page. There are 407 image occurrences; 405 were downloaded into `images/` (about 48 MB), while two source URLs returned 404 during capture and are represented by local placeholders. The author should confirm permission to republish text, photographs, newspaper clippings, and other embedded material.
 
