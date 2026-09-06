@@ -1,7 +1,11 @@
 :root { color-scheme: light; --ink:#202522; --muted:#68736d; --paper:#fbfaf6; --line:#dfe4df; --accent:#496f61; }
 * { box-sizing: border-box; }
+html { scroll-behavior:smooth; }
 body { margin:0; color:var(--ink); background:var(--paper); font-family:system-ui,-apple-system,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif; line-height:1.8; }
 a { color:var(--accent); }
+:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+.skip-link { position:absolute; left:12px; top:12px; z-index:30; padding:8px 12px; background:var(--paper); border:1px solid var(--accent); border-radius:8px; text-decoration:none; transform:translateY(-160%); }
+.skip-link:focus, .skip-link:focus-visible { transform:none; }
 .wrap { max-width:980px; margin:0 auto; padding:28px 20px 64px; }
 header { border-bottom:1px solid var(--line); margin-bottom:28px; padding-bottom:18px; }
 h1 { line-height:1.3; margin:0 0 8px; font-size:clamp(1.7rem,4vw,2.7rem); }
@@ -25,7 +29,6 @@ h2 { line-height:1.4; }
 .search { margin:20px 0 14px; }
 .search label { display:block; color:var(--muted); font-size:.9rem; margin-bottom:5px; }
 .search input { width:min(100%, 620px); border:1px solid var(--line); border-radius:10px; padding:9px 12px; background:white; color:var(--ink); font:inherit; }
-.search input:focus { outline:2px solid var(--accent); outline-offset:2px; }
 .language-nav { display:flex; gap:8px; flex-wrap:wrap; margin:18px 0 12px; }
 .language-nav-label { width:100%; color:var(--muted); font-size:.9rem; margin-bottom:2px; }
 .language-filter { color:var(--accent); border:1px solid var(--line); border-radius:999px; padding:6px 11px; background:white; font:inherit; cursor:pointer; }
@@ -34,15 +37,18 @@ h2 { line-height:1.4; }
 .filter-status { display:flex; align-items:center; justify-content:space-between; gap:12px; color:var(--muted); font-size:.92rem; margin:10px 0 4px; }
 #reset-filters { color:var(--accent); border:1px solid var(--line); border-radius:999px; padding:5px 10px; background:white; font:inherit; cursor:pointer; }
 #reset-filters:hover { color:white; border-color:var(--accent); background:var(--accent); }
-@media (max-width:700px) { .filter-status { align-items:flex-start; flex-direction:column; } }
-.year-nav { display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin:18px 0 30px; }
+.year-nav { display:flex; align-items:center; gap:8px; flex-wrap:wrap; position:sticky; top:0; z-index:8; background:var(--paper); margin:0 -20px 18px; padding:10px 20px 12px; border-bottom:1px solid var(--line); }
 .year-nav-label { width:100%; color:var(--muted); font-size:.9rem; margin-bottom:2px; }
 .year-nav button { display:inline-flex; align-items:center; gap:7px; color:var(--accent); border:1px solid var(--line); border-radius:999px; padding:6px 11px; background:white; font:inherit; cursor:pointer; }
 .year-nav button:hover, .year-nav button.active { color:white; border-color:var(--accent); background:var(--accent); }
+.year-nav button.active:focus-visible, .language-filter.active:focus-visible { outline-color:var(--paper); }
 .year-nav small { color:var(--muted); font-size:.78rem; }
 .year-nav button.active small { color:white; }
 .year-nav button[hidden], .month-section[hidden], .year-section[hidden], .entry[hidden] { display:none; }
-.year-section { scroll-margin-top:18px; margin:34px 0 42px; }
+.year-section { scroll-margin-top:120px; margin:34px 0 42px; }
+.back-to-top { position:fixed; right:16px; bottom:16px; z-index:20; color:var(--paper); background:var(--accent); border:1px solid var(--accent); border-radius:999px; padding:10px 14px; text-decoration:none; box-shadow:0 4px 16px rgba(32,37,34,.18); opacity:0; visibility:hidden; pointer-events:none; }
+.back-to-top.is-visible { opacity:1; visibility:visible; pointer-events:auto; }
+.back-to-top:focus-visible { outline-color:var(--paper); outline-offset:3px; }
 .year-section h2 { border-bottom:1px solid var(--line); padding-bottom:8px; margin-bottom:22px; }
 .year-section h2 small, .month-section h3 small { color:var(--muted); font-size:.78em; font-weight:500; }
 .month-section { margin:24px 0 28px; }
@@ -76,3 +82,11 @@ article h1 { margin-bottom:5px; }
 .not-found a { display:inline-block; margin-top:10px; border:1px solid var(--line); border-radius:999px; padding:7px 13px; background:white; text-decoration:none; }
 .not-found a:hover { border-color:var(--accent); }
 footer { color:var(--muted); font-size:.88rem; margin-top:28px; }
+@media (max-width:700px) { .filter-status { align-items:flex-start; flex-direction:column; } }
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+@media print {
+  .skip-link, .search, .language-nav, .filter-status, .year-nav, .back-to-top, header a { display:none !important; }
+  body { background:white; }
+  .wrap { max-width:none; padding:0; }
+  article, .entry, .timeline-item { break-inside:avoid; }
+}
