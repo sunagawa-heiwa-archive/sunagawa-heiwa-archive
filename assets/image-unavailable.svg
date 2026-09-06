@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="315" viewBox="0 0 420 315" role="img" aria-labelledby="title desc">
+  <title id="title">Image unavailable in snapshot</title>
+  <desc id="desc">The original image could not be retrieved when this archive was captured.</desc>
+  <rect width="420" height="315" fill="#f3f6f1" stroke="#dfe4df" stroke-width="3"/>
+  <path d="M110 205l55-64 42 47 35-38 68 70H110z" fill="#9bb4a8"/>
+  <circle cx="278" cy="113" r="25" fill="#6d9584"/>
+  <text x="210" y="255" text-anchor="middle" fill="#496f61" font-family="system-ui, sans-serif" font-size="18">Image unavailable</text>
+  <text x="210" y="279" text-anchor="middle" fill="#68736d" font-family="system-ui, sans-serif" font-size="14">画像未取得</text>
+</svg>

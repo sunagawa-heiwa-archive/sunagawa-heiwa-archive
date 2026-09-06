@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Sunagawa Heiwa Hiroba Public Article Archive</title>
+  <desc id="desc">Public archive of articles from Sunagawa Heiwa Hiroba.</desc>
+  <rect width="1200" height="630" fill="#fbfaf6"/>
+  <rect x="70" y="70" width="1060" height="490" rx="28" fill="#f3f6f1" stroke="#dfe4df" stroke-width="4"/>
+  <path d="M170 180h110c48 0 86 38 86 86v184c-25-22-58-34-92-34h-104z" fill="#496f61"/>
+  <path d="M390 180h110c34 0 67 12 92 34v184c-25-22-58-34-92-34h-110z" fill="#6d9584"/>
+  <text x="170" y="500" fill="#202522" font-family="system-ui, sans-serif" font-size="42" font-weight="700">Sunagawa Heiwa Hiroba</text>
+  <text x="170" y="540" fill="#68736d" font-family="system-ui, sans-serif" font-size="25">Public Article Archive</text>
+</svg>
